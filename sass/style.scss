@@ -13,6 +13,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+
 }
 
 header {
@@ -41,8 +43,10 @@ header {
 
     h1 {
         text-align: center;
-        font-size: 1.5em;
+        font-size: 2em;
         color: $greyBlack;
+        margin-bottom: 20px;
+        margin-top: 20px;
     }
 }
 
@@ -50,6 +54,8 @@ footer {
     background-color: $greyBlack;
     padding: 20px;
     margin-top: 30px;
+    
+   
 
     p {
         color: white;
@@ -94,14 +100,61 @@ footer {
     max-width: 960px;
     width: 100%;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
+    align-items: flex-start;
+    flex: 1 0 auto;
 
-    #lists {
+    #movieCard {
+        order: 1;
+
+    }
+
+    #show-details, #cast {
         margin-left: 40px;
+        order: 2;
+
+        h3{
+            color: $greyBlack;
+        }
+
+
+        #lists {
+            display: flex;
+            flex-direction: column;
+
+            
+            h3 {
+                order: 1;
+                color: #343a40;
+            }
+
+            #ul-season {
+                order: 2;
+                margin: 5px;
+
+            }
+        }
+
+        #ul-cast{
+            margin: 5px;
+            order: 2;
+        }
+
+
     }
 
     img {
         max-height: 550px;
         max-width: 400px;
     }
+
+    .lower-div {
+        order: 3;
+        margin-bottom: 100px;
+        h2{
+            color: $greyBlack;
+        }
+    }
 }
+
