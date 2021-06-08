@@ -58,7 +58,7 @@ function createPosters(data, dataSeasons) {
     const showDetails = document.createElement('h2')
     showDetails.textContent = 'Show Details'
     const summary = document.createElement('p')
-    summary.textContent = `${data.summary}`
+    summary.innerHTML = `${data.summary}`
     title.textContent = `${data.name}`
 
     titleBar.appendChild(title)
@@ -70,8 +70,6 @@ function createPosters(data, dataSeasons) {
 
     console.log(data)
     console.log(dataSeasons);
-
-
 }
 
 // build seasons
@@ -79,7 +77,7 @@ function createSeasonElement(dataSeasons) {
     const seasonTitle = document.createElement('h3')
     seasonTitle.textContent = `Seasons (${dataSeasons.length})`
     const ul = document.createElement('ul')
-    ul.setAttribute('id','ul-seasons')
+    ul.setAttribute('id', 'ul-seasons')
     dataSeasons.forEach(e => {
         const li = document.createElement('li')
         li.textContent = `${e.premiereDate} - ${e.endDate}`
@@ -88,8 +86,6 @@ function createSeasonElement(dataSeasons) {
         showDetails.appendChild(seasonTitle)
         showDetails.appendChild(ul)
         ul.appendChild(li)
-        
-
     });
     console.log(dataSeasons);
 }
@@ -99,8 +95,8 @@ function createCastElement(dataCast) {
     const castTitle = document.createElement('h3')
     castTitle.textContent = `Cast`
     const ul = document.createElement('ul')
-    ul.setAttribute('id','ul-cast')
-    dataCast.slice(0,10).forEach(e => {
+    ul.setAttribute('id', 'ul-cast')
+    dataCast.slice(0, 10).forEach(e => {
         const personName = document.createElement('li')
         personName.textContent = `${e.person.name}`
         const showDetails = document.querySelector('#show-details')
@@ -108,14 +104,10 @@ function createCastElement(dataCast) {
         showDetails.appendChild(castTitle)
         showDetails.appendChild(ul)
         ul.appendChild(personName)
-    
-        
-
     });
     console.log(dataCast);
 
 }
-
 
 getData()
 seasonInfo()

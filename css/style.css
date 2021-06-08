@@ -5,7 +5,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', sans-serif;
   height: 100vh; }
 
 header {
@@ -14,11 +14,15 @@ header {
   max-height: 30px;
   background-color: #343a40;
   align-items: center; }
+  header a {
+    color: white;
+    text-decoration: none; }
   header input {
     height: 20px;
     width: 150px;
-    border-radius: 5px;
     border: none; }
+    header input::placeholder {
+      font-size: 8px; }
   header h3 {
     color: white; }
 
@@ -56,6 +60,8 @@ footer {
     margin: 20px; }
     #show-list div img {
       width: 100%; }
+      #show-list div img:hover {
+        cursor: pointer; }
     #show-list div a:link {
       text-align: center;
       margin: 0;
@@ -63,6 +69,8 @@ footer {
       text-decoration: none;
       display: block;
       margin: 0 auto; }
+    #show-list div a:visited {
+      color: #343a40; }
 
 #show-info {
   margin: 0 auto;
@@ -75,21 +83,27 @@ footer {
   flex: 1 0 auto; }
   #show-info #movieCard {
     order: 1; }
-  #show-info #show-details, #show-info #cast {
+  #show-info #show-details,
+  #show-info #cast {
     margin-left: 40px;
     order: 2; }
-    #show-info #show-details h3, #show-info #cast h3 {
+    #show-info #show-details h3,
+    #show-info #cast h3 {
       color: #343a40; }
-    #show-info #show-details #lists, #show-info #cast #lists {
+    #show-info #show-details #lists,
+    #show-info #cast #lists {
       display: flex;
       flex-direction: column; }
-      #show-info #show-details #lists h3, #show-info #cast #lists h3 {
+      #show-info #show-details #lists h3,
+      #show-info #cast #lists h3 {
         order: 1;
         color: #343a40; }
-      #show-info #show-details #lists #ul-season, #show-info #cast #lists #ul-season {
+      #show-info #show-details #lists #ul-season,
+      #show-info #cast #lists #ul-season {
         order: 2;
         margin: 5px; }
-    #show-info #show-details #ul-cast, #show-info #cast #ul-cast {
+    #show-info #show-details #ul-cast,
+    #show-info #cast #ul-cast {
       margin: 5px;
       order: 2; }
   #show-info img {
@@ -100,5 +114,26 @@ footer {
     margin-bottom: 100px; }
     #show-info .lower-div h2 {
       color: #343a40; }
+
+#dropdown {
+  position: absolute;
+  background-color: white;
+  border-top: none;
+  right: 324px;
+  width: 151px;
+  top: 9px;
+  border-radius: 0 0 5px 5px;
+  padding-left: 0;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.05);
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.05); }
+  #dropdown li {
+    list-style-type: none;
+    padding-left: 0;
+    padding: 4px;
+    color: #343a40;
+    font-size: 14px; }
+    #dropdown li:hover {
+      background-color: #343a40;
+      color: white; }
 
 /*# sourceMappingURL=style.css.map */
